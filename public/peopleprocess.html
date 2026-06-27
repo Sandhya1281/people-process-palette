@@ -479,7 +479,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
   <div class="container">
     <div class="foot-grid">
       <div class="foot-brand">
-        <div class="logo" style="color:#26A69A">Mente<span style="color:#fff">Square</span></div>
+        <div class="logo" style="color:#26A69A">Mente<span style="color:var(--ink)">Square</span></div>
         <p>PeopleProcess: Business Psychology in Action — People. Performance. Possibilities.</p>
         <div class="socials"><a href="#" aria-label="Instagram">IG</a><a href="#" aria-label="LinkedIn">in</a><a href="#" aria-label="Twitter">X</a><a href="#" aria-label="YouTube">YT</a></div>
       </div>
@@ -493,13 +493,9 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
 
 <script>
 const nav=document.getElementById('nav');
-const hero=document.querySelector('.hero');
 function onScroll(){
   const scrolled=window.scrollY>40;
   nav.classList.toggle('scrolled',scrolled);
-  // dark mode while over hero
-  const heroBottom=hero.getBoundingClientRect().bottom;
-  nav.classList.toggle('dark-mode',heroBottom>80 && !scrolled);
 }
 window.addEventListener('scroll',onScroll);onScroll();
 
