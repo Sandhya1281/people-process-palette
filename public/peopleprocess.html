@@ -289,6 +289,15 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
   </div>
 </nav>
 
+<div class="topbar" id="topbar" aria-label="Announcements">
+  <div class="topbar-track" id="topbarTrack">
+    <div class="topbar-slide"><span class="tb-tag">New Course</span><span>PeopleProcess: Business Psychology in Action — <strong>People. Performance. Possibilities.</strong></span></div>
+    <div class="topbar-slide"><span class="tb-tag">Faculty</span><span>Learn with Dr. Riya Menon, Arjun Kapoor &amp; Sneha Nair — practitioners from McKinsey, IIM-B &amp; Flipkart.</span></div>
+    <div class="topbar-slide"><span class="tb-tag">Early Bird</span><span>Save ₹2,000 on the August 2025 cohort — offer ends 31 July. <a href="#register" style="text-decoration:underline">Reserve seat →</a></span></div>
+  </div>
+  <div class="topbar-dots" id="topbarDots"></div>
+</div>
+
 <section class="hero">
   <div class="container">
     <div class="hero-grid">
@@ -301,17 +310,21 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;back
           <a href="#curriculum" class="btn btn-outline">Download Syllabus</a>
         </div>
       </div>
-      <div class="mockup">
-        <div class="mockup-header"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
-        <h4>PeopleProcess · Cohort 04</h4>
-        <p class="sub">People. Performance. Possibilities.</p>
-        <div class="stats-grid">
-          <div class="stat"><span class="num">10</span><span class="lbl">Modules</span></div>
-          <div class="stat"><span class="num">12</span><span class="lbl">Weeks</span></div>
-          <div class="stat"><span class="num">24+</span><span class="lbl">Live Sessions</span></div>
-          <div class="stat"><span class="num">1:1</span><span class="lbl">Mentorship</span></div>
+      <form class="hero-form" id="register" onsubmit="event.preventDefault();alert('Thanks! We\\'ll reach out within 24 hours.');this.reset();">
+        <h4>Reserve Your Seat · Cohort 04</h4>
+        <p class="sub">August 2025 · Limited seats. Apply in under a minute.</p>
+        <div class="form-row"><label>Full Name</label><input type="text" required placeholder="Aarav Sharma" /></div>
+        <div class="form-row"><label>Email Address</label><input type="email" required placeholder="you@email.com" /></div>
+        <div class="form-row"><label>Phone Number</label><input type="tel" required placeholder="+91 98765 43210" /></div>
+        <div class="form-row"><label>Current Role</label>
+          <select required><option value="">Select your role</option><option>Student</option><option>Working Professional</option><option>Founder</option><option>Other</option></select>
         </div>
-      </div>
+        <div class="form-row"><label>How did you hear about us?</label>
+          <select required><option value="">Select an option</option><option>Instagram</option><option>LinkedIn</option><option>Friend / Referral</option><option>Google Search</option><option>Newsletter</option><option>Other</option></select>
+        </div>
+        <button type="submit" class="btn btn-full">Reserve My Spot →</button>
+        <p class="reg-note">Limited seats per cohort. Enroll early to lock in your slot.</p>
+      </form>
     </div>
   </div>
 </section>
