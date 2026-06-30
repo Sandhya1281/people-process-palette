@@ -548,6 +548,29 @@ const io=new IntersectionObserver((entries)=>{
   });
 },{threshold:0.12});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+// Top carousel
+(function(){
+  const track=document.getElementById('topbarTrack');
+  const dotsWrap=document.getElementById('topbarDots');
+  if(!track) return;
+  const slides=track.children.length;
+  let i=0;
+  for(let k=0;k<slides;k++){
+    const b=document.createElement('button');
+    b.setAttribute('aria-label','Slide '+(k+1));
+    b.addEventListener('click',()=>{i=k;render();reset();});
+    dotsWrap.appendChild(b);
+  }
+  function render(){
+    track.style.transform='translateX(-'+(i*100)+'%)';
+    [...dotsWrap.children].forEach((d,k)=>d.classList.toggle('active',k===i));
+  }
+  let t=setInterval(next,4500);
+  function next(){i=(i+1)%slides;render();}
+  function reset(){clearInterval(t);t=setInterval(next,4500);}
+  render();
+})();
 </script>
 </body>
 </html>
